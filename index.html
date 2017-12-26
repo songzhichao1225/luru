@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="./pubil/js/jquery.js"></script>
+    <script src="./pubil/js/bootstrap.min.js"></script>
+    <link href="./pubil/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class='container'>
+
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+       登录
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class='form-group'>
+                            <label>用户名:</label>
+                            <input type="" name="" class='form-control' id="user">
+                        </div>
+                        <div class='form-group'>
+                            <label>密码:</label>
+                            <input type="password" name="" class='form-control' id="pass">
+                        </div>
+                        <input type="button" class='btn btn-default btn-info btn-block' data-dismiss="modal" id="btn9" name="" value="登录">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="btn3" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+        录入
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel1">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class='form-group text-center'>
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">序号:</label>
+                            <input type="" name="" class='num form-control' style="width: 200px" id="num"><span id="d" style="color:red;float: right;display: block;margin-top: -25px"></span>
+                        </div>
+                        <div class='form-group text-center'>
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">姓名:</label>
+                            <input type="" name="" class='xm form-control' style="width: 200px" id="name"><span id="a" style="color:red;float: right;display: block;margin-top: -25px"></span>
+                        </div>
+                        <div class='form-group text-center' style="overflow: hidden">
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">性别：</label>
+                            <select name="" id="select" class="text-left" style="float: left">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                        <div class='form-group'>
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">生日:</label>
+                            <input type="date" name="" class='date form-control' style="width: 200px" id="szc">
+                        </div>
+                        <div class='form-group text-center'>
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">年龄:</label>
+                            <input type="" name="" class='age form-control text-left' style="width: 200px" id="yung"><span id="c" style="color:red;float: right;display: block;margin-top: -25px"></span>
+                        </div>
+
+                        <div class='form-group text-center' style="overflow: hidden">
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">学历：</label>
+                            <select name="" id="select1" class="text-left" style="float: left">
+                                <option value="初中">初中</option>
+                                <option value="高中">高中</option>
+                                <option value="大专">大专</option>
+                                <option value="大学">大学</option>
+                            </select>
+                        </div>
+                        <div class='form-group text-center'>
+                            <label style="width: 150px; float: left; text-align: center;line-height:35px">照片:</label>
+                            <input type="file" id="fil" width="200px">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="btn" data-dismiss="modal">录入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>1703班级录入名单</h1>
+</div>
+
+
+<div class='container'>
+    <table class='table table-striped'>
+        <thead>
+        <tr class="bg-warning">
+            <th>序号</th>
+            <th class='text-info'>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>生日</th>
+            <th>学历</th>
+            <th>照片</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel3">Modal title</h4>
+            </div>
+            <div class="modal-body2">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    var n=document.querySelector('#num')
+     n.onblur=function () {
+         var r= /^[0-9]*$/;
+         if(r.test($('#num').val())===false){
+             $('#d').html('请输入正确序号！')
+         }else{
+             $('#d').html('')
+         }
+     }
+
+    var a=document.querySelector('#name')
+    a.onblur=function () {
+        var r=  /^[\u4E00-\u9FA5]+$/;
+        if(r.test($('#name').val())===false){
+            $('#a').html("请输入正确姓名！")
+        }else{
+            $('#a').html('')
+        }
+    }
+
+    var g=document.querySelector('#yung')
+    g.onblur=function () {
+        var r= /^[0-9]*$/;
+        if(r.test($('#yung').val())===false){
+            $('#c').html('请输入正确年龄！')
+        }else{
+            $('#c').html('')
+        }
+    }
+    $('#szc').blur(function () {
+        var ko=new Date();
+        $('#yung').val(parseInt(ko.getFullYear()-parseInt($('#szc').val().slice(0,4))))
+    })
+    var p=$('#yung').val()
+    if (parseInt(p)>20){
+
+    }
+
+
+    $('#btn').click(function () {
+        $.ajax({
+            url:'http://localhost:8080/xinxi/insert',
+            type:'post',
+            data:{
+                num:$('#num').val(),
+                name:$('#name').val(),
+                sex:$('#select').val(),
+                yung:$('#yung').val(),
+                szc:$('#szc').val(),
+                xl:$('#select1').val(),
+            },
+            success:function(e){
+                console.log(e)
+            }
+        });
+        $('#myModal1').hide()
+        and();
+    });
+
+
+
+    function and() {
+        $.ajax({
+            url:'http://localhost:8080/xinxi/select',
+            type:'post',
+            success:function(e){
+                $('#tb').html('');
+                console.log(e);
+                for(var i in e){
+                    $('#tb').append('<tr><th>'+e[i].id+'</th><th onclick="xq('+e[i].id+')" data-toggle="modal" data-target="#myModal3">'+e[i].name+'</th><th>'+e[i].sex+'</th><th class="age1">'+e[i].yung+'</th><th>'+e[i].szc+'</th><th>'+e[i].xl+'</th><th><img style="width: 40px;height: 30px" src="pubil/img/'+e[i].img+'" alt=""></th><th><button class="del btn btn-danger glyphicon glyphicon-trash" data-id="'+e[i].id+'"></button ></th></tr>')
+                }
+            }
+        })
+    }
+    and()
+
+   $('#tb').on('click','.del',function () {
+       var id=$(this).attr('data-id');
+       var _this=$(this)
+       $.ajax({
+           url:'http://localhost:8080/xinxi/delect',
+           type:'post',
+           data:{
+               id:id
+           },
+           success:function(e){
+
+           console.log(e)
+           }
+       })
+   and();
+   })
+
+
+
+
+    $('#fil').change(function() {
+        getFiles(this)
+    })
+    var file;
+
+    function getFiles(el) {
+        file = el.files
+    }
+    $('#btn').click(function() {
+        var fd = new FormData();
+        for(var i = 0; i < file.length; i++) {
+            fd.append('files', file[i])
+        }
+        $.ajax({
+            url: 'http://localhost:8080/xinxi/img',
+            type: 'POST',
+            data: fd,
+            contentType: false,
+            processData: false,
+            success: function(e) {
+            }
+        })
+    })
+    $('#btn3').hide();
+
+    $('#btn9').click(function(){
+        $.ajax({
+            url:'http://localhost:8080/user/biubiu',
+            type:'post',
+            data:{
+                user:$('#user').val(),
+                pass:$('#pass').val()
+            },
+            success:function(data){
+                console.log(data)
+                if(data == '失败'){
+                    alert('用户名或者密码错误！')
+                }else{
+                    $('#btn3').show();
+                }
+            }
+        })
+    })
+
+
+
+    function xq(id) {
+        $.ajax({
+            url: 'http://localhost:8080/xinxi/select2',
+            type: 'POST',
+            data: {
+                id: id
+            },
+            success: function(e) {
+                console.log(id)
+                $(".modal-body2").html(`<div class="zp text-center">照片:<img src="pubil/img/${e[0].img}"></div><div class="xm text-center">姓名:${e[0].name}</div><div class="nl text-center">年龄:${e[0].yung}</div><div class="xl text-center">学历:${e[0].xl}</div>`)
+            }
+        })
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

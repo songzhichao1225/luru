@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="user" placeholder="登录名"/><br>
+<input type="password" id="pass" placeholder="密码"><br>
+<button id="btn2">登录</button>
+<script type="text/javascript" src="jquery.min.js"></script>
+
+</body>
+</html>
+<script>
+    $('#btn2').click(function(){
+        $.ajax({
+            url:'http://localhost:8080/user/biubiu',
+            type:'post',
+            data:{
+                user:$('#user').val(),
+                pass:$('#pass').val()
+            },
+            success:function(data){
+                console.log(data)
+                if(data == '失败'){
+                    alert('用户名或者密码错误！')
+                }else{
+                    window.location='index.html'
+                }
+            }
+        })
+    })
+
+
+
+
+
+
+
+</script>
